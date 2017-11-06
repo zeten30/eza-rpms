@@ -1,6 +1,6 @@
 Name: exa
-Version: 0.8.0
-Release: 1
+Version: 0.9.0
+Release: 2
 Summary: Replacement for 'ls' written in Rust.
 Group: Applications/System
 BuildRoot: %buildroot
@@ -56,6 +56,12 @@ Replacement for 'ls' written in Rust.
 
 
 %changelog
+* Tue Oct 24  2017 Milan Zink <zeten30@gmail.com> - 0.9.0-2
+- upstream sync (0.9 prerelease)
+
+* Wed Oct 11 2017 Milan Zink <zeten30@gmail.com> - 0.9.0-1
+- upstream sync
+
 * Tue Oct 3 2017 Milan Zink <zeten30@gmail.com> - 0.8.0-1
 - upstream sync
 
