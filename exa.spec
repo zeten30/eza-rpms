@@ -1,6 +1,6 @@
 Name: exa
 Version: 0.9.1
-Release: 0
+Release: 1
 Summary: Replacement for 'ls' written in Rust.
 Group: Applications/System
 BuildRoot: %buildroot
