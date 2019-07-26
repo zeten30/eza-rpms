@@ -1,5 +1,5 @@
 Name: exa
-Version: 0.9.1
+Version: 0.9.2
 Release: 1
 Summary: Replacement for 'ls' written in Rust.
 Group: Applications/System
@@ -56,6 +56,9 @@ Replacement for 'ls' written in Rust.
 
 
 %changelog
+* Fri Jul 26 2019 Milan Zink <zeten30@gmail.com> - 0.9.2-1
+- upstream sync
+
 * Tue Mar 27 2018 Milan Zink <zeten30@gmail.com> - 0.9.1-0
 - upstream sync (0.9 prerelease)
 
