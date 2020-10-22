@@ -1,6 +1,6 @@
 Name: exa
-Version: 0.9.2
-Release: 3
+Version: 0.9.3
+Release: 1
 Summary: Replacement for 'ls' written in Rust.
 Group: Applications/System
 BuildRoot: %buildroot
@@ -51,11 +51,15 @@ Replacement for 'ls' written in Rust.
 /etc/bash_completion.d/exa
 /usr/bin/exa
 /usr/share/fish/vendor_completions.d/exa.fish
+/usr/share/licenses/exa/LICENCE
 /usr/share/man/man1/exa.1.gz
 /usr/share/zsh/vendor-completions/_exa
 
 
 %changelog
+* Fri Jul 23 2020 Milan Zink <zeten30@gmail.com> - 0.9.3.1
+- upstream sync
+
 * Fri Jul 26 2019 Milan Zink <zeten30@gmail.com> - 0.9.2-1
 - upstream sync
 
