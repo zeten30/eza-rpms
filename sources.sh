@@ -14,8 +14,8 @@ cp ~/.cargo/bin/${PKG_NAME} "src/${PKG_NAME}/"
 
 mkdir -p "src/${PKG_NAME}/completions"
 
-cp -r "${SRC_PATH}/completions/" "src/${PKG_NAME}/completions/"
-cp -r "${SRC_PATH}/LICENCE" "src/${PKG_NAME}/"
+cp -r "${SRC_PATH}/completions/" "src/${PKG_NAME}/"
+cp -r "${SRC_PATH}/LICENCE" "src/${PKG_NAME}/LICENSE"
 
 cd src/ || exit
 
