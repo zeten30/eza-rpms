@@ -1,14 +1,14 @@
-Name: exa
-Version: 0.9.3
+Name: eza
+Version: 0.11.2
 Release: 1
 Summary: Replacement for 'ls' written in Rust.
 Group: Applications/System
 BuildRoot: %buildroot
 License: MIT
-Vendor: Benjamin Sago <https://github.com/ogham>
-URL: https://github.com/ogham/exa
-Packager: Milan Zink <zeten30@gmail.com>
-Source0: exa.tar.gz
+Vendor: Christina Sørensen <https://github.com/cafkafk>
+URL: https://github.com/eza-community/eza
+
+Source0: eza.tar.gz
 
 %global _enable_debug_package 0
 %global debug_package %{nil}
@@ -18,45 +18,45 @@ Source0: exa.tar.gz
 Replacement for 'ls' written in Rust.
 
 %prep
-%setup -q -n exa
+%setup -q -n eza
 
 %build
 # noop
 
 %install
 %{__install} -d -m755 %{buildroot}/usr/bin/
-%{__cp} -pr exa  %{buildroot}/usr/bin/
-
-%{__install} -d -m755 %{buildroot}/usr/share/man/man1/
-%{__cp} -pr exa-man %{buildroot}/usr/share/man/man1/exa.1
+%{__cp} -pr eza  %{buildroot}/usr/bin/
 
 %{__install} -d -m755 %{buildroot}/etc/bash_completion.d/
-%{__cp} -pr completions.bash %{buildroot}/etc/bash_completion.d/exa
+%{__cp} -pr completions/bash/eza %{buildroot}/etc/bash_completion.d/eza
 
 %{__install} -d -m755 %{buildroot}/usr/share/fish/vendor_completions.d/
-%{__cp} -pr completions.fish %{buildroot}/usr/share/fish/vendor_completions.d/exa.fish
+%{__cp} -pr completions/fish/eza.fish %{buildroot}/usr/share/fish/vendor_completions.d/eza.fish
 
 %{__install} -d -m755 %{buildroot}/usr/share/zsh/vendor-completions/
-%{__cp} -pr completions.zsh %{buildroot}/usr/share/zsh/vendor-completions/_exa
+%{__cp} -pr completions/zsh/_eza %{buildroot}/usr/share/zsh/vendor-completions/_eza
 
-%{__install} -d -m755 %{buildroot}/usr/share/licenses/exa/
-%{__cp} -pr LICENCE %{buildroot}/usr/share/licenses/exa/LICENCE
+%{__install} -d -m755 %{buildroot}/usr/share/licenses/eza/
+%{__cp} -pr LICENCE %{buildroot}/usr/share/licenses/eza/LICENCE
 
 %clean
-# noop
+%{__rm__} -rf %{buildroot}
 
 %files
 %license LICENCE
 %defattr(-,root,root,-)
-/etc/bash_completion.d/exa
-/usr/bin/exa
-/usr/share/fish/vendor_completions.d/exa.fish
-/usr/share/licenses/exa/LICENCE
-/usr/share/man/man1/exa.1.gz
-/usr/share/zsh/vendor-completions/_exa
+/etc/bash_completion.d/eza
+/usr/bin/eza
+/usr/share/fish/vendor_completions.d/eza.fish
+/usr/share/licenses/eza/LICENCE
+/usr/share/man/man1/eza.1.gz
+/usr/share/zsh/vendor-completions/_eza
 
 
 %changelog
+* Wed Sep 13 2023 Milan Zink <zeten30@gmail.com> - 0.11.2.1
+- exa forked and renamed to eza
+
 * Fri Jul 23 2020 Milan Zink <zeten30@gmail.com> - 0.9.3.1
 - upstream sync
 
@@ -64,9 +64,6 @@ Replacement for 'ls' written in Rust.
 - upstream sync
 
 * Tue Mar 27 2018 Milan Zink <zeten30@gmail.com> - 0.9.1-0
-- upstream sync (0.9 prerelease)
-
-* Tue Oct 24  2017 Milan Zink <zeten30@gmail.com> - 0.9.0-2
 - upstream sync (0.9 prerelease)
 
 * Wed Oct 11 2017 Milan Zink <zeten30@gmail.com> - 0.9.0-1
@@ -82,4 +79,4 @@ Replacement for 'ls' written in Rust.
 - rpmspec, F27 ready build
 
 * Tue Sep 12 2017 Milan Zink <zeten30@gmail.com> - 0.7.0-1
-- initial exa rpm release
+- initial eza rpm release

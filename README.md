@@ -1,2 +1,3 @@
-# exa-rpms
-RPM for https://github.com/ogham/exa
+# eza-rpms
+
+Fedora RPMs for [eza](https://github.com/eza-community/eza).

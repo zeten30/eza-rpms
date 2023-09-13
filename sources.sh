@@ -1,19 +1,24 @@
 #!/bin/bash
 
-rm -rf src/github-exa 2>/dev/null
+PKG_NAME="eza"
+GIT_REPO="https://github.com/eza-community/eza"
+SRC_PATH="src/github-eza"
 
-git clone https://github.com/ogham/exa src/github-exa
+rm -rf "${SRC_PATH:?}/" 2>/dev/null
 
-cargo install --git https://github.com/ogham/exa --force
+git clone "${GIT_REPO}" "${SRC_PATH}"
 
-cp ~/.cargo/bin/exa src/exa/
+cargo install --git "${GIT_REPO}" --force
 
-cp -r src/github-exa/contrib/man/exa.1 src/exa/exa-man
-cp -r src/github-exa/contrib/completions* src/exa/
-cp -r src/github-exa/LICENCE src/exa/
+cp ~/.cargo/bin/${PKG_NAME} "src/${PKG_NAME}/"
 
-cd src/
+mkdir -p "src/${PKG_NAME}/completions"
 
-tar cfz exa.tar.gz exa/
+cp -r "${SRC_PATH}/completions/" "src/${PKG_NAME}/completions/"
+cp -r "${SRC_PATH}/LICENCE" "src/${PKG_NAME}/"
+
+cd src/ || exit
+
+tar cfz "${PKG_NAME}.tar.gz" "${PKG_NAME}/"
 
 cd ..
