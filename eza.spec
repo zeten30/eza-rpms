@@ -1,5 +1,5 @@
 Name: eza
-Version: 0.11.2
+Version: 0.17.0
 Release: 1
 Summary: Replacement for 'ls' written in Rust.
 Group: Applications/System
@@ -49,6 +49,9 @@ Replacement for 'ls' written in Rust.
 
 
 %changelog
+* Wed Jan 3 2024 Milan Zink <zeten30@gmail.com> - 0.17.0.1
+- new upstream release
+
 * Wed Sep 13 2023 Milan Zink <zeten30@gmail.com> - 0.11.2.1
 - exa forked and renamed to eza
 
